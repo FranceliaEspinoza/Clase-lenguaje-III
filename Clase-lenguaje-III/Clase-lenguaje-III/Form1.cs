@@ -7,77 +7,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Clase_lenguaje_III
 {
     public partial class Form1 : Form
     {
+      
         public Form1()
         {
             InitializeComponent();
         }
-
-
-
-
-
         private void limpiarbutton_Click(object sender, EventArgs e)
         {
             NombretextBox.Clear();
             edadTexBox.Clear();
+            DatoscomboBox.Items.Clear();
+            MessageBox.Show("Todos los datos han sido eliminados");
         }
 
         private void IngresarButton_Click(object sender, EventArgs e)
         {
-            string[] Nombre = new string [] {NombretextBox.Text};
-            int[] edad = new int[] {Convert.ToInt32(edadTexBox.Text)};
-
-
-            foreach (var items in Nombre)
-            {
-
-                DatoscomboBox.Items.Add(items);
-
-           }
-            foreach (var items in edad)
-            {
-
-                DatoscomboBox.Items.Add(items);
-            }
-
+            DatoscomboBox.Items.Add(NombretextBox.Text + " - " + edadTexBox.Text);
+            MessageBox.Show(NombretextBox.Text + " - " + edadTexBox.Text + " agregados");
+            NombretextBox.Clear();
+            edadTexBox.Clear();
         }
 
         private void Ascbutton_Click(object sender, EventArgs e)
         {
-            string[] Nombre = new string[] { NombretextBox.Text };
-            int[] edad = new int[] { Convert.ToInt32(edadTexBox.Text) };
-
-
-            foreach (var items in Nombre)
-            {
-
-                DatoscomboBox.Sorted = true; 
-
-            }
-           
+             DatoscomboBox.Sorted = true;
+            MessageBox.Show("DatoscomboBox ordenados ascendentemente");                    
         }
 
         private void descbutton_Click(object sender, EventArgs e)
-        {
-            string[] Nombre = new string[] { NombretextBox.Text };
-            //int[] edad = new int[] { Convert.ToInt32(edadTexBox.Text) };
-
-            Array.Sort(Nombre);
-            Array.Reverse(Nombre);
-
-            foreach (var items in Nombre)
+        {           
+            DatoscomboBox.Sorted = false;
+            ArrayList Francelia = new ArrayList();
+            Francelia.AddRange(DatoscomboBox.Items);
+            Francelia.Reverse();
+            DatoscomboBox.Items.Clear();
+            for (int i = 0; i < Francelia.Count; i ++)
             {
-
-                DatoscomboBox.Items.AddRange(Nombre);
-
+                DatoscomboBox.Items.Add(Francelia[i]);
             }
-
-
+            MessageBox.Show("DatoscomboBox ordenados descendentemente");
         }
     }
 

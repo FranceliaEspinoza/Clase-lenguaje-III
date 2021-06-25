@@ -40,6 +40,7 @@ namespace Clase_lenguaje_III
             this.Ascbutton = new System.Windows.Forms.Button();
             this.descbutton = new System.Windows.Forms.Button();
             this.limpiarbutton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -58,20 +59,20 @@ namespace Clase_lenguaje_III
             this.IngresarButton.Name = "IngresarButton";
             this.IngresarButton.Size = new System.Drawing.Size(101, 39);
             this.IngresarButton.TabIndex = 1;
-            this.IngresarButton.Text = "Ingresar";
+            this.IngresarButton.Text = "Ingresar Datos";
             this.IngresarButton.UseVisualStyleBackColor = true;
             this.IngresarButton.Click += new System.EventHandler(this.IngresarButton_Click);
             // 
             // NombretextBox
             // 
-            this.NombretextBox.Location = new System.Drawing.Point(159, 35);
+            this.NombretextBox.Location = new System.Drawing.Point(171, 35);
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(172, 20);
             this.NombretextBox.TabIndex = 2;
             // 
             // edadTexBox
             // 
-            this.edadTexBox.Location = new System.Drawing.Point(159, 85);
+            this.edadTexBox.Location = new System.Drawing.Point(171, 85);
             this.edadTexBox.Name = "edadTexBox";
             this.edadTexBox.Size = new System.Drawing.Size(172, 20);
             this.edadTexBox.TabIndex = 3;
@@ -81,18 +82,18 @@ namespace Clase_lenguaje_III
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 13);
+            this.label1.Size = new System.Drawing.Size(152, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Ingrese el nombre del Alumno";
+            this.label1.Text = "Ingrese el nombre del Alumno: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(112, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Edad";
+            this.label2.Text = "Edad:";
             // 
             // groupBox1
             // 
@@ -109,6 +110,7 @@ namespace Clase_lenguaje_III
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Controls.Add(this.DatoscomboBox);
             this.groupBox2.Location = new System.Drawing.Point(30, 34);
@@ -123,7 +125,7 @@ namespace Clase_lenguaje_III
             this.Ascbutton.Name = "Ascbutton";
             this.Ascbutton.Size = new System.Drawing.Size(100, 39);
             this.Ascbutton.TabIndex = 8;
-            this.Ascbutton.Text = "Ordenar ascendentes";
+            this.Ascbutton.Text = "Ordenar Ascendente";
             this.Ascbutton.UseVisualStyleBackColor = true;
             this.Ascbutton.Click += new System.EventHandler(this.Ascbutton_Click);
             // 
@@ -133,7 +135,7 @@ namespace Clase_lenguaje_III
             this.descbutton.Name = "descbutton";
             this.descbutton.Size = new System.Drawing.Size(100, 39);
             this.descbutton.TabIndex = 9;
-            this.descbutton.Text = "Ordenar descendente";
+            this.descbutton.Text = "Ordenar Descendente";
             this.descbutton.UseVisualStyleBackColor = true;
             this.descbutton.Click += new System.EventHandler(this.descbutton_Click);
             // 
@@ -143,25 +145,35 @@ namespace Clase_lenguaje_III
             this.limpiarbutton.Name = "limpiarbutton";
             this.limpiarbutton.Size = new System.Drawing.Size(100, 39);
             this.limpiarbutton.TabIndex = 10;
-            this.limpiarbutton.Text = "Limpiar";
+            this.limpiarbutton.Text = "Limpiar Datos";
             this.limpiarbutton.UseVisualStyleBackColor = true;
             this.limpiarbutton.Click += new System.EventHandler(this.limpiarbutton_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(426, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Datos:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(989, 370);
+            this.ClientSize = new System.Drawing.Size(735, 341);
             this.Controls.Add(this.limpiarbutton);
             this.Controls.Add(this.descbutton);
             this.Controls.Add(this.Ascbutton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.IngresarButton);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Ejercicio ComboBox | Francelia Espinoza";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -179,6 +191,7 @@ namespace Clase_lenguaje_III
         private System.Windows.Forms.Button Ascbutton;
         private System.Windows.Forms.Button descbutton;
         private System.Windows.Forms.Button limpiarbutton;
+        private System.Windows.Forms.Label label3;
     }
 }
 
